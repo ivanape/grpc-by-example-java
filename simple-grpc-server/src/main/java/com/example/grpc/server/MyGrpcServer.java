@@ -31,10 +31,10 @@ import java.io.IOException;
  */
 public class MyGrpcServer {
   static public void main(String [] args) throws IOException, InterruptedException {
-    Server server = ServerBuilder.forPort(8080)
+    Server server = ServerBuilder.forPort(6565)
         .addService(new GreetingServiceImpl()).build();
 
-    System.out.println("Starting server...");
+    System.out.println("Starting server on port 6565 ...");
     server.start();
     System.out.println("Server started!");
     server.awaitTermination();
